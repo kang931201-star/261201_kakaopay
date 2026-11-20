@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>피카PC방 × 카카오페이 | 첫 결제 500원 즉시 할인</title>
+<meta name="description" content="카카오페이 가맹 피카PC방에서 카카오페이머니로 5천원 이상 첫 결제 시 선착순 500원 즉시 할인! 2026.12.01~12.31">
+<meta name="keywords" content="피카PC방,피카플레이,카카오페이,첫결제,할인,이벤트">
+<meta name="author" content="PICA × kakaopay">
+<meta name="theme-color" content="#FAD7DE">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="PICA × kakaopay">
+<meta property="og:title" content="피카PC방 × 카카오페이 | 첫 결제 500원 즉시 할인">
+<meta property="og:description" content="카카오페이 가맹 피카PC방에서 카카오페이머니로 5천원 이상 첫 결제 시 선착순 500원 즉시 할인! (12/1~12/31)">
+<meta property="og:url" content="https://ics.mediaweb.co.kr/_event/20261201_kakaopay/html/index.html" />
+<meta property="og:image" content="https://ics.mediaweb.co.kr/_event/20261201_kakaopay/assets/images/Thumbnail_800x400.jpg">
+<meta property="og:image:alt" content="피카PC방 × 카카오페이 첫 결제 500원 즉시 할인 이벤트">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="피카PC방 × 카카오페이 | 첫 결제 500원 즉시 할인">
+<meta name="twitter:description" content="카카오페이 가맹 피카PC방에서 카카오페이머니로 5천원 이상 첫 결제 시 선착순 500원 즉시 할인! (12/1~12/31)">
+<meta name="twitter:url" content="https://ics.mediaweb.co.kr/_event/20261201_kakaopay/html/index.html" />
+<meta name="twitter:image" content="https://ics.mediaweb.co.kr/_event/20261201_kakaopay/assets/images/Thumbnail_1200x630.jpg">
+<meta name="twitter:image:alt" content="피카PC방 × 카카오페이 첫 결제 500원 즉시 할인 이벤트">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jua&amp;family=Noto+Sans+KR:wght@400;500;700;900&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<header class="cb-header" id="top">
+    <div class="cb-header__inner">
+      <div class="cb-header__notice-wrap">
+        <!-- PC방 토글 -->
+        <button class="toggle-btn" type="button" id="pcRoomToggle" data-state="off" aria-label="PC방 모드 토글">
+          <img class="toggle-btn__img" src="../assets/images/off=off.png" alt="PC방 모드 OFF" loading="lazy" />
+        </button>
+        <p class="cb-header__notice">
+          본 이벤트는 <a href="https://www.picaplay.com/pcbang/main.do" target="_blank" rel="noopener noreferrer"><u>카카오페이 가맹 피카PC방</u></a>에서 <b>카카오페이머니로 5천원 이상 결제</b> 시 참여 가능합니다.
+        </p>
+      </div>
+      <button class="btn-share" type="button" id="btnShare" aria-label="공유하기">
+        <img src="../assets/images/share_icon.svg" alt="share icon" />
+        <span>공유하기</span>
+      </button>
+    </div>
+  </header>
+
+<div class="evt">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <!-- 배경: 눈 덮인 산, 나무, 구름 -->
+    <svg class="hero__bg" aria-hidden="true" viewBox="0 0 1440 400" preserveAspectRatio="xMidYMax slice">
+      <defs>
+        <symbol id="pkTree" viewBox="0 0 60 96">
+          <rect x="26" y="78" width="8" height="14" rx="2" fill="#E7A9B8"></rect>
+          <g fill="#F5C1CE">
+            <path d="M30 42 57 80Q49 75 43 80 37 75 30 80 23 75 17 80 11 75 3 80Z"></path>
+            <path d="M30 22 51 54Q44 49 39 54 34 49 30 54 26 49 21 54 16 49 9 54Z"></path>
+            <path d="M30 3 45 30Q39 26 34 31 30 26 26 31 21 26 15 30Z"></path>
+          </g>
+          <path d="M30 46 52 77Q48 75 43 78ZM30 26 47 51Q43 49 39 52ZM30 7 42 27Q39 26 35 29Z" fill="#F0B3C3"></path>
+        </symbol>
+      </defs>
+      <g fill="#FFF6F9" stroke="#F5C1CE" stroke-width="2.5" stroke-linejoin="round">
+        <path d="M150 126c-22 0-22-32 4-34 2-28 44-36 56-12 14-22 58-14 56 12 26 0 28 34 2 34Z"></path>
+        <path d="M1200 196c-20 0-20-28 4-30 2-26 40-32 52-10 14-20 54-12 52 10 30-2 32 30 4 30Z"></path>
+      </g>
+      <g fill="#F7CBD5">
+        <path d="M-20 330C110 250 190 196 270 200 360 206 440 270 560 330Z"></path>
+        <path d="M500 340C680 226 840 150 950 158 1080 168 1210 250 1460 300V400H500Z"></path>
+      </g>
+      <use href="#pkTree" x="6" y="222" width="80" height="112"></use>
+      <use href="#pkTree" x="80" y="262" width="54" height="76"></use>
+      <use href="#pkTree" x="300" y="268" width="40" height="58"></use>
+      <use href="#pkTree" x="1300" y="212" width="90" height="126"></use>
+      <use href="#pkTree" x="1250" y="264" width="52" height="74"></use>
+      <use href="#pkTree" x="1100" y="272" width="40" height="58"></use>
+      <path d="M-20 330C240 300 520 336 760 322 1000 308 1220 336 1460 314V400H-20Z" fill="#FFF6F9"></path>
+    </svg>
+
+    <!-- 내리는 눈 -->
+    <div class="m-snow m-snow-b" aria-hidden="true"></div>
+    <div class="m-snow m-snow-a" aria-hidden="true"></div>
+
+    <!-- 자수 스티커 공통 정의 -->
+    <svg class="svg-defs" aria-hidden="true" focusable="false">
+      <defs>
+        <filter id="pkYarn" x="-10%" y="-10%" width="120%" height="130%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="4" result="n"></feTurbulence>
+          <feDisplacementMap in="SourceGraphic" in2="n" scale="3.2" xChannelSelector="R" yChannelSelector="G" result="d"></feDisplacementMap>
+          <feDropShadow in="d" dx="0" dy="3" stdDeviation="2" flood-color="#C27688" flood-opacity="0.35"></feDropShadow>
+        </filter>
+        <pattern id="pkGreen" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><rect width="6" height="6" fill="#6D9767"></rect><rect width="2.5" height="6" fill="#86AF7F"></rect></pattern>
+        <pattern id="pkRed" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(-38)"><rect width="6" height="6" fill="#EC2B2E"></rect><rect width="2.5" height="6" fill="#F0585C"></rect></pattern>
+        <pattern id="pkPurple" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><rect width="6" height="6" fill="#A17ACD"></rect><rect width="2.5" height="6" fill="#B898DB"></rect></pattern>
+        <pattern id="pkBlue" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><rect width="6" height="6" fill="#A8D6F7"></rect><rect width="2.5" height="6" fill="#C6E5FA"></rect></pattern>
+        <pattern id="pkCream" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><rect width="6" height="6" fill="#FFF6F9"></rect><rect width="2.5" height="6" fill="#FFFFFF"></rect></pattern>
+        <pattern id="pkYellow" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><rect width="6" height="6" fill="#F7CF4A"></rect><rect width="2.5" height="6" fill="#FFE07A"></rect></pattern>
+      </defs>
+    </svg>
+
+    <!-- 자수 스티커 (콘텐츠 폭 1080px 안) -->
+    <div class="hero__stickers" aria-hidden="true">
+      <svg class="deco deco--tree m-sway" viewBox="0 0 100 100">
+        <g filter="url(#pkYarn)">
+          <path d="M50 10 78 48H64l22 30H14l22-30H22Z" fill="url(#pkGreen)" stroke="#4E7449" stroke-width="3" stroke-linejoin="round"></path>
+          <path d="M50 18 68 44M50 18 32 44M38 54 22 74M62 54 78 74" stroke="#C3DDBE" stroke-width="1.6" stroke-dasharray="3 3" fill="none"></path>
+          <rect x="43" y="78" width="14" height="14" fill="#B07F6E" stroke="#7E5546" stroke-width="3"></rect>
+          <circle cx="44" cy="40" r="4.5" fill="#EC2B2E"></circle><circle cx="58" cy="60" r="4.5" fill="#A8D6F7"></circle><circle cx="34" cy="68" r="4.5" fill="#EC2B2E"></circle><circle cx="68" cy="70" r="4.5" fill="#A17ACD"></circle>
+          <path d="m50 0 3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z" fill="url(#pkYellow)" stroke="#C99E1E" stroke-width="2" stroke-linejoin="round"></path>
+        </g>
+      </svg>
+      <svg class="deco deco--snow m-spin" viewBox="0 0 100 100">
+        <g filter="url(#pkYarn)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M50 8v84M14 29l72 42M14 71l72-42M40 14l10 8 10-8M40 86l10-8 10 8M18 42l9-5-5-10M82 58l-9 5 5 10M18 58l9 5-5 10M82 42l-9-5 5-10" stroke="#6FAEDB" stroke-width="9"></path>
+          <path d="M50 8v84M14 29l72 42M14 71l72-42M40 14l10 8 10-8M40 86l10-8 10 8M18 42l9-5-5-10M82 58l-9 5 5 10M18 58l9 5-5 10M82 42l-9-5 5-10" stroke="#A8D6F7" stroke-width="5.5"></path>
+          <path d="M50 10v80M16 30l68 40M16 70l68-40" stroke="#FFFFFF" stroke-width="1.3" stroke-dasharray="2 3" opacity="0.85"></path>
+        </g>
+      </svg>
+      <svg class="deco deco-lg deco--gift m-sway d2" viewBox="0 0 100 100">
+        <g filter="url(#pkYarn)" stroke-linejoin="round">
+          <rect x="16" y="42" width="68" height="50" rx="4" fill="url(#pkPurple)" stroke="#7A56A6" stroke-width="3"></rect>
+          <rect x="10" y="30" width="80" height="16" rx="4" fill="url(#pkPurple)" stroke="#7A56A6" stroke-width="3"></rect>
+          <rect x="44" y="30" width="12" height="62" fill="url(#pkBlue)" stroke="#6FAEDB" stroke-width="2.5"></rect>
+          <path d="M50 30C38 12 22 14 26 24c3 8 16 7 24 6ZM50 30c12-18 28-16 24-6-3 8-16 7-24 6Z" fill="url(#pkBlue)" stroke="#6FAEDB" stroke-width="2.5"></path>
+          <path d="M22 52v34M78 52v34" stroke="#D8C6EE" stroke-width="1.4" stroke-dasharray="3 3"></path>
+        </g>
+      </svg>
+      <svg class="deco deco-lg deco--mitten m-sway d3" viewBox="0 0 100 100">
+        <g filter="url(#pkYarn)" stroke-linejoin="round">
+          <path d="M30 32C30 12 62 10 64 30l2 18c6-8 18-4 14 8L70 72l-2 6H32Z" fill="url(#pkRed)" stroke="#A81B1F" stroke-width="3"></path>
+          <path d="M48 36v20M38 46h20M41 39l14 14M55 39 41 53" stroke="#FFFFFF" stroke-width="1.8" stroke-dasharray="2.5 2.5" stroke-linecap="round"></path>
+          <rect x="28" y="76" width="44" height="18" rx="5" fill="url(#pkCream)" stroke="#E7A9B8" stroke-width="3"></rect>
+          <path d="M36 79v12M44 79v12M52 79v12M60 79v12" stroke="#F5C1CE" stroke-width="2"></path>
+        </g>
+      </svg>
+      <svg class="deco deco-lg deco--star1 m-tw" viewBox="0 0 40 40">
+        <path filter="url(#pkYarn)" d="m20 2 5 11 12 1-9 8 3 12-11-6-11 6 3-12-9-8 12-1z" fill="url(#pkYellow)" stroke="#C99E1E" stroke-width="2" stroke-linejoin="round"></path>
+      </svg>
+      <svg class="deco deco-lg deco--star2 m-tw d2" viewBox="0 0 40 40">
+        <path filter="url(#pkYarn)" d="m20 2 5 11 12 1-9 8 3 12-11-6-11 6 3-12-9-8 12-1z" fill="url(#pkRed)" stroke="#A81B1F" stroke-width="2" stroke-linejoin="round"></path>
+      </svg>
+    </div>
+
+    <div class="hero__inner">
+      <!-- 로고 -->
+      <div class="hero__logos m-logo">
+        <img src="../assets/images/kakaopay_ci.svg" alt="카카오페이">
+        <span class="x" aria-hidden="true">×</span>
+        <img src="../assets/images/pica_logo.png" alt="PICA">
+      </div>
+
+      <!-- 타이틀 (자수 실 효과) -->
+      <h1 class="hero__title m-title">
+        <svg role="img" aria-label="카카오페이 첫 결제 500원 즉시 할인" viewBox="0 0 1000 300">
+          <defs>
+            <filter id="ptYarn" x="-8%" y="-10%" width="116%" height="130%">
+              <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="4" result="n"></feTurbulence>
+              <feDisplacementMap in="SourceGraphic" in2="n" scale="3.2" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap>
+            </filter>
+            <pattern id="ptDark" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><rect width="7" height="7" fill="#360808"></rect><rect width="3" height="7" fill="#5A1A1C"></rect></pattern>
+            <pattern id="ptRed" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><rect width="6" height="6" fill="#EC2B2E"></rect><rect width="2.5" height="6" fill="#F0585C"></rect></pattern>
+            <pattern id="ptWhite" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(-38)"><rect width="6" height="6" fill="#FFFFFF"></rect><rect width="2.5" height="6" fill="#FFF6F9"></rect></pattern>
+          </defs>
+          <g filter="url(#ptYarn)" font-family="Cafe24Surround, Jua, sans-serif" text-anchor="middle" stroke-linejoin="round" stroke-linecap="round">
+            <g transform="translate(0 8)" fill="#F0B3C3" stroke="#F0B3C3">
+              <text x="500" y="92" font-size="64" stroke-width="12">카카오페이 첫 결제</text>
+              <text x="500" y="252" font-size="124" stroke-width="16">500원 즉시 할인</text>
+            </g>
+            <g fill="url(#ptWhite)" stroke="url(#ptWhite)">
+              <text x="500" y="92" font-size="64" stroke-width="12">카카오페이 첫 결제</text>
+              <text x="500" y="252" font-size="124" stroke-width="16">500원 즉시 할인</text>
+            </g>
+            <text x="500" y="92" font-size="64" fill="url(#ptRed)">카카오페이 첫 결제</text>
+            <text x="500" y="252" font-size="124" fill="url(#ptDark)">500원 즉시 할인</text>
+          </g>
+        </svg>
+      </h1>
+
+      <!-- 이벤트 기간 -->
+      <p class="hero__period f-round m-title"><em>이벤트 기간</em>2026. 12. 01(화) ~ 12. 31(목)</p>
+
+      <!-- 쿠폰 편지봉투 -->
+      <svg class="hero__coupon m-env" role="img" aria-label="빨간 편지봉투에 담긴 500원 할인 쿠폰" viewBox="0 0 600 520">
+        <defs>
+          <linearGradient id="pePurple" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#B898DB"></stop><stop offset="1" stop-color="#A17ACD"></stop></linearGradient>
+          <linearGradient id="peBlue" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#C6E5FA"></stop><stop offset="1" stop-color="#A8D6F7"></stop></linearGradient>
+          <radialGradient id="peShadow"><stop offset="0" stop-color="#C27688" stop-opacity="0.35"></stop><stop offset="1" stop-color="#C27688" stop-opacity="0"></stop></radialGradient>
+          <path id="peTicket" d="M22 0H52a33 33 0 0 0 66 0h30q22 0 22 22V300H0V22Q0 0 22 0Z"></path>
+          <pattern id="pyBack" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><rect width="9" height="9" fill="#C81E24"></rect><rect width="2.5" height="9" fill="#FFFFFF" fill-opacity="0.22"></rect></pattern>
+          <pattern id="pyFront" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><rect width="9" height="9" fill="#EC2B2E"></rect><rect width="2.5" height="9" fill="#FFFFFF" fill-opacity="0.38"></rect></pattern>
+          <pattern id="pyFlap" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(-38)"><rect width="9" height="9" fill="#F0585C"></rect><rect width="2.5" height="9" fill="#FFFFFF" fill-opacity="0.42"></rect></pattern>
+          <filter id="pyYarn" x="-10%" y="-10%" width="120%" height="130%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7" result="n"></feTurbulence>
+            <feDisplacementMap in="SourceGraphic" in2="n" scale="3.4" xChannelSelector="R" yChannelSelector="G" result="d"></feDisplacementMap>
+            <feDropShadow in="d" dx="0" dy="6" stdDeviation="6" flood-color="#A8465A" flood-opacity="0.25"></feDropShadow>
+          </filter>
+        </defs>
+
+        <ellipse cx="300" cy="492" rx="230" ry="22" fill="url(#peShadow)"></ellipse>
+        <g filter="url(#pyYarn)">
+          <rect x="84" y="226" width="432" height="244" rx="38" fill="url(#pyBack)" stroke="#A3171C" stroke-width="3"></rect>
+        </g>
+
+        <!-- 뒤 쿠폰 (하늘색) -->
+        <g class="m-cp m-cp2">
+          <g transform="translate(150 74) rotate(-11 85 150)" filter="url(#pyYarn)">
+            <use href="#peTicket" fill="url(#peBlue)" stroke="#6FAEDB" stroke-width="3" stroke-linejoin="round"></use>
+            <path d="M28 96h116" stroke="#6FAEDB" stroke-width="6.5" stroke-dasharray="11 9" stroke-linecap="round"></path>
+            <g fill="#FFFFFF"><rect x="34" y="48" width="5" height="30" rx="2"></rect><rect x="45" y="48" width="8" height="30" rx="2"></rect><rect x="59" y="48" width="4" height="30" rx="2"></rect><rect x="69" y="48" width="9" height="30" rx="2"></rect><rect x="84" y="48" width="5" height="30" rx="2"></rect><rect x="95" y="48" width="8" height="30" rx="2"></rect><rect x="109" y="48" width="4" height="30" rx="2"></rect><rect x="119" y="48" width="9" height="30" rx="2"></rect><rect x="134" y="48" width="4" height="30" rx="2"></rect></g>
+          </g>
+        </g>
+
+        <!-- 앞 쿠폰 (보라, 500원) -->
+        <g class="m-cp">
+          <g transform="translate(268 92) rotate(9 85 150)" filter="url(#pyYarn)">
+            <use href="#peTicket" fill="url(#pePurple)" stroke="#7A56A6" stroke-width="3" stroke-linejoin="round"></use>
+            <path d="M28 96h116" stroke="#7A56A6" stroke-width="6.5" stroke-dasharray="11 9" stroke-linecap="round"></path>
+            <g fill="#FFFFFF"><rect x="34" y="48" width="5" height="30" rx="2"></rect><rect x="45" y="48" width="8" height="30" rx="2"></rect><rect x="59" y="48" width="4" height="30" rx="2"></rect><rect x="69" y="48" width="9" height="30" rx="2"></rect><rect x="84" y="48" width="5" height="30" rx="2"></rect><rect x="95" y="48" width="8" height="30" rx="2"></rect><rect x="109" y="48" width="4" height="30" rx="2"></rect><rect x="119" y="48" width="9" height="30" rx="2"></rect><rect x="134" y="48" width="4" height="30" rx="2"></rect></g>
+            <text x="86" y="134" text-anchor="middle" font-family="Cafe24Surround, Jua, sans-serif" font-size="20" fill="#F3ECFA">할인 쿠폰</text>
+            <text x="86" y="190" text-anchor="middle" font-family="Cafe24Surround, Jua, sans-serif" font-size="50" fill="#FFFFFF">500원</text>
+          </g>
+        </g>
+
+        <!-- 봉투 앞면 -->
+        <g filter="url(#pyYarn)" stroke-linejoin="round" stroke-linecap="round">
+          <path d="M108 244 300 384 492 244q24-16 24 18v170q0 38-38 38H122q-38 0-38-38V262q0-34 24-18Z" fill="url(#pyFront)" stroke="#A3171C" stroke-width="3"></path>
+          <path d="M104 266 300 408 496 266V430q0 26-26 26H130q-26 0-26-26Z" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-dasharray="8 6"></path>
+          <path d="M96 458 266 334q34-24 68 0l170 124q-8 12-26 12H122q-18 0-26-12Z" fill="url(#pyFlap)" stroke="#A3171C" stroke-width="3"></path>
+          <path d="M120 452 274 346q26-17 52 0l154 106" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-dasharray="8 6"></path>
+        </g>
+
+        <!-- 반짝이 -->
+        <g fill="#FFFFFF">
+          <path class="m-tw" d="m70 150 6 15 15 6-15 6-6 15-6-15-15-6 15-6z"></path>
+          <path class="m-tw d2" d="m530 120 5 12 12 5-12 5-5 12-5-12-12-5 12-5z"></path>
+          <path class="m-tw d3" d="m548 330 4 9 9 4-9 4-4 9-4-9-9-4 9-4z"></path>
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ================= INTRO + CTA ================= -->
+  <section class="intro">
+    <svg class="squig squig--l" aria-hidden="true" viewBox="0 0 60 20"><path d="M2 14q12-12 28 0 16-12 28 0" fill="none" stroke="#F5C1CE" stroke-width="3" stroke-linecap="round"></path></svg>
+    <svg class="squig squig--r" aria-hidden="true" viewBox="0 0 60 20"><path d="M2 14q12-12 28 0 16-12 28 0" fill="none" stroke="#F5C1CE" stroke-width="3" stroke-linecap="round"></path></svg>
+    <h2 class="intro__copy f-round m-reveal">카카오페이로 처음 결제하면<br>500원 바로 할인해 드려요!</h2>
+    <div class="cta-wrap">
+      <a class="btn-red f-round" href="https://www.picaplay.com/pcbang/main.do#" target="_blank" rel="noopener noreferrer">
+        카카오페이 가맹 PC방 찾기
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ================= INFO ================= -->
+  <section class="info">
+    <div class="info-card m-reveal">
+      <dl class="info-card__list">
+        <div class="info-card__row">
+          <dt class="info-card__label f-round">참여 대상</dt>
+          <dd class="info-card__body">
+            <p class="info-card__main f-round">피카PC방 카카오페이 첫 결제 고객</p>
+            <p class="info-card__note">* 기존 PC방 카카오페이머니 결제 이력이 없는 고객 대상</p>
+          </dd>
+        </div>
+        <div class="info-card__row">
+          <dt class="info-card__label info-card__label--accent f-round">할인 혜택</dt>
+          <dd class="info-card__body">
+            <p class="info-card__sub">카카오페이 가맹 피카PC방에서 카카오페이머니로</p>
+            <p class="info-card__main info-card__main--lg f-round">5천원 이상 결제 시 <em>선착순 500원 즉시 할인!</em></p>
+            <p class="info-card__note">* 기간 내 1인 1회 · 예산 소진 시 조기 종료</p>
+          </dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ================= HOW TO ================= -->
+  <section class="howto">
+    <div class="howto__inner">
+      <h2 class="howto__title f-round">참여 방법</h2>
+      <ol class="howto__list">
+
+        <li class="step m-reveal">
+          <span class="step__num f-round">STEP 1</span>
+          <p class="step__title f-round">카카오페이 가맹<br>PC방 방문하기</p>
+          <p class="step__desc">PC방 찾기 › 편의시설 ‘카카오페이’ 선택</p>
+          <div class="mock mock--search" aria-hidden="true">
+            <b class="mock__title">PC방 찾기</b>
+            <div class="mock__row"><span class="mock__field"></span><span class="mock__field"></span></div>
+            <div class="mock__search">카카오페이<span class="mock__search-ico"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#360808" stroke-width="2.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg></span></div>
+          </div>
+          <a class="btn-step f-round" href="https://www.picaplay.com/pcbang/main.do#" target="_blank" rel="noopener noreferrer">가맹 PC방 찾기<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path></svg></a>
+        </li>
+
+        <li class="step m-reveal">
+          <span class="step__num f-round">STEP 2</span>
+          <p class="step__title f-round">요금제·먹거리 결제 시<br>카카오페이 선택</p>
+          <p class="step__desc">PC 좌석 화면에서 결제수단 선택</p>
+          <div class="mock mock--pay" aria-hidden="true">
+            <b class="mock__title">결제수단 선택</b>
+            <span class="mock__chip">신용카드</span>
+            <span class="mock__chip">현금</span>
+            <span class="mock__chip">피카페이</span>
+            <span class="mock__chip mock__chip--on"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"></path></svg>카카오페이</span>
+            <span class="mock__paybtn">결제하기</span>
+          </div>
+        </li>
+
+        <li class="step m-reveal">
+          <span class="step__num f-round">STEP 3</span>
+          <p class="step__title f-round">QR 스캔 후 카카오페이머니로<br>5,000원 이상 결제!</p>
+          <p class="step__desc">할인은 결제 즉시 적용돼요</p>
+          <div class="mock mock--qr">
+            <div class="mock__qr">
+              <svg role="img" aria-label="QR 코드 예시" width="100" height="100" viewBox="0 0 21 21">
+                <g fill="#360808">
+                  <path d="M0 0h7v7H0zM1 1v5h5V1zM2 2h3v3H2z" fill-rule="evenodd"></path>
+                  <path d="M14 0h7v7h-7zM15 1v5h5V1zM16 2h3v3h-3z" fill-rule="evenodd"></path>
+                  <path d="M0 14h7v7H0zM1 15v5h5v-5zM2 16h3v3H2z" fill-rule="evenodd"></path>
+                  <path d="M8 0h1v2H8zM10 1h2v1h-2zM9 3h2v2H9zM8 6h1v2H8zM11 6h2v1h-2zM12 3h1v2h-1zM0 8h2v1H0zM3 8h2v2H3zM6 9h2v1H6zM9 9h3v1H9zM13 8h2v2h-2zM16 8h1v1h-1zM18 9h3v1h-3zM1 11h2v1H1zM5 11h3v2H5zM10 11h1v3h-1zM12 11h3v1h-3zM17 11h2v2h-2zM8 13h1v1H8zM14 13h2v2h-2zM19 14h2v1h-2zM8 15h3v1H8zM12 16h2v2h-2zM16 16h1v3h-1zM18 17h3v1h-3zM9 18h2v1H9zM8 20h4v1H8zM14 19h1v2h-1zM18 19h1v2h-1zM20 20h1v1h-1z"></path>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </li>
+
+      </ol>
+    </div>
+  </section>
+
+  <!-- ================= NOTICE ================= -->
+  <section class="notice">
+    <div class="notice__inner">
+      <h3 class="notice__title f-round">꼭 확인하세요!</h3>
+      <ul class="notice__list">
+        <li>본 이벤트는 피카PC방 카카오페이 첫 결제 회원만 참여 가능합니다.</li>
+        <li>본 이벤트는 카카오페이머니로 5,000원 이상 결제 시에만 할인 혜택이 적용됩니다.</li>
+        <li>본 이벤트는 기간 내 1인 1회, 선착순으로 참여 가능합니다.</li>
+        <li>본 이벤트는 상황에 따라 조기 종료 또는 연장될 수 있습니다.</li>
+        <li>PC방 카카오페이 첫 결제 이벤트에 참여한 이력이 있는 회원은 참여 불가합니다.</li>
+        <li>카카오페이로 피카페이를 충전한 금액은 이벤트 대상에 포함되지 않습니다.</li>
+        <li>기간 내 전체 취소 후 다시 결제 시 할인 혜택 재적용이 가능하며, 부분 취소 시에는 불가합니다.</li>
+        <li>이벤트 진행 관련 문의는 피카플레이 또는 크래프트박스를 통해 1:1 문의 부탁드립니다.</li>
+      </ul>
+    </div>
+  </section>
+
+</div>
+
+<div id="shareModal" class="share-modal" role="dialog" aria-modal="true" aria-labelledby="shareModalTitle" aria-hidden="true">
+    <div class="share-modal__dialog" role="document">
+      <button type="button" class="share-modal__close" id="shareModalClose" aria-label="닫기">&times;</button>
+      <h2 id="shareModalTitle" class="share-modal__title">공유하기</h2>
+      <div class="share-modal__grid">
+        <button type="button" class="share-item share-item--kakao" data-share="kakao" aria-label="카카오톡으로 공유">
+          <span class="share-item__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C6.48 3 2 6.58 2 11c0 2.83 1.86 5.32 4.66 6.73L5.5 21.5l4.2-2.47c.76.11 1.54.17 2.3.17 5.52 0 10-3.58 10-8S17.52 3 12 3z"/></svg>
+          </span>
+          <span class="share-item__label">카카오톡</span>
+        </button>
+        <button type="button" class="share-item share-item--facebook" data-share="facebook" aria-label="페이스북으로 공유">
+          <span class="share-item__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.3 0-1.3-.1-2.5-.1-2.4 0-4.1 1.5-4.1 4.2v2.3H7.5v3.1h2.6V21h3.4z"/></svg>
+          </span>
+          <span class="share-item__label">페이스북</span>
+        </button>
+        <button type="button" class="share-item share-item--twitter" data-share="twitter" aria-label="트위터(X)로 공유">
+          <span class="share-item__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.451-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg>
+          </span>
+          <span class="share-item__label">트위터</span>
+        </button>
+        <button type="button" class="share-item share-item--naver" data-share="naver" aria-label="네이버 블로그로 공유">
+          <span class="share-item__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.91 12.03 9.94 6H6v12h4.09v-6.03L14.06 18H18V6h-4.09z"/></svg>
+          </span>
+          <span class="share-item__label">네이버블로그</span>
+        </button>
+        <button type="button" class="share-item share-item--instagram" data-share="instagram" aria-label="인스타그램 공유용 URL 복사">
+          <span class="share-item__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </span>
+          <span class="share-item__label">인스타그램</span>
+        </button>
+        <button type="button" class="share-item share-item--copy" data-share="copy" aria-label="URL 복사">
+          <span class="share-item__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          </span>
+          <span class="share-item__label">URL 복사</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="copyToast" class="copy-toast" role="status" aria-live="polite">클립보드에 복사되었습니다.</div>
+  <div class="mobile-fab" role="group" aria-label="모바일 플로팅 버튼">
+    <button class="mobile-fab__btn" type="button" id="btnShareFloating" aria-label="공유하기">
+      <img src="../assets/images/share_icon.svg" alt="" aria-hidden="true" loading="lazy" />
+    </button>
+    <button class="mobile-fab__btn mobile-fab__btn--top" type="button" id="btnScrollTop" aria-label="맨 위로">
+      <span aria-hidden="true">TOP</span>
+    </button>
+  </div>
+
+<script>
+    function setPcRoomToggleState(isPcRoom) {
+      var toggleBtn = document.getElementById('pcRoomToggle');
+      if (!toggleBtn) { return; }
+      var toggleImg = toggleBtn.querySelector('.toggle-btn__img');
+      if (!toggleImg) { return; }
+      var isOn = Boolean(isPcRoom);
+      toggleBtn.dataset.state = isOn ? 'on' : 'off';
+      toggleImg.src = isOn ? '../assets/images/off=on.png' : '../assets/images/off=off.png';
+      toggleImg.alt = isOn ? 'PC방 모드 ON' : 'PC방 모드 OFF';
+    }
+    setPcRoomToggleState(false);
+
+    var SHARE_CONFIG = {
+      title: '피카PC방 × 카카오페이 | 첫 결제 500원 즉시 할인',
+      description: '카카오페이 가맹 피카PC방에서 카카오페이머니로 5천원 이상 첫 결제 시 선착순 500원 즉시 할인! (12/1~12/31)',
+      kakaoKey: 'd1c0c39f4dbac0062bf36527a3021357',
+      ogImage:  'https://ics.mediaweb.co.kr/_event/20261201_kakaopay/assets/images/Thumbnail_800x400.jpg'
+    };
+
+    var copyToast = document.getElementById('copyToast');
+    var copyToastTimer = null;
+    var DEFAULT_TOAST_MSG = '클립보드에 복사되었습니다.';
+    function showCopyToast(msg) {
+      if (!copyToast) { return; }
+      copyToast.textContent = msg || DEFAULT_TOAST_MSG;
+      copyToast.classList.add('is-visible');
+      if (copyToastTimer) { clearTimeout(copyToastTimer); }
+      copyToastTimer = setTimeout(function() {
+        copyToast.classList.remove('is-visible');
+      }, 2200);
+    }
+    function fallbackCopyText(text) {
+      var textarea = document.createElement('textarea');
+      textarea.value = text;
+      textarea.setAttribute('readonly', '');
+      textarea.style.position = 'fixed';
+      textarea.style.opacity = '0';
+      document.body.appendChild(textarea);
+      textarea.select();
+      var copied = false;
+      try {
+        copied = document.execCommand('copy');
+      } catch (e) {}
+      document.body.removeChild(textarea);
+      return copied;
+    }
+    function copyUrlWithToast(url, toastMsg) {
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(url).then(function() {
+          showCopyToast(toastMsg);
+        }).catch(function() {
+          if (fallbackCopyText(url)) { showCopyToast(toastMsg); }
+        });
+      } else if (fallbackCopyText(url)) {
+        showCopyToast(toastMsg);
+      }
+    }
+
+    (function initKakao() {
+      if (!window.Kakao || !SHARE_CONFIG.kakaoKey) { return; }
+      if (Kakao.isInitialized && Kakao.isInitialized()) { return; }
+      try { Kakao.init(SHARE_CONFIG.kakaoKey); } catch (e) {}
+    })();
+
+    var shareModal = document.getElementById('shareModal');
+    var shareModalClose = document.getElementById('shareModalClose');
+    var lastShareTrigger = null;
+    function openShareModal(trigger) {
+      if (!shareModal) { return; }
+      lastShareTrigger = trigger || null;
+      shareModal.classList.add('is-open');
+      shareModal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      if (shareModalClose) { shareModalClose.focus(); }
+    }
+    function closeShareModal() {
+      if (!shareModal) { return; }
+      shareModal.classList.remove('is-open');
+      shareModal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      if (lastShareTrigger && lastShareTrigger.focus) { lastShareTrigger.focus(); }
+    }
+    if (shareModal) {
+      shareModal.addEventListener('click', function(e) {
+        if (e.target === shareModal) { closeShareModal(); }
+      });
+    }
+    if (shareModalClose) {
+      shareModalClose.addEventListener('click', closeShareModal);
+    }
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && shareModal && shareModal.classList.contains('is-open')) {
+        closeShareModal();
+      }
+    });
+
+    function openPopup(url) {
+      var w = 600, h = 600;
+      var left = (window.screen.width  - w) / 2;
+      var top  = (window.screen.height - h) / 2;
+      window.open(url, '_blank', 'width=' + w + ',height=' + h + ',left=' + left + ',top=' + top + ',noopener');
+    }
+    function shareFacebook() {
+      var u = encodeURIComponent(window.location.href);
+      openPopup('https://www.facebook.com/sharer/sharer.php?u=' + u);
+    }
+    function shareTwitter() {
+      var u = encodeURIComponent(window.location.href);
+      var t = encodeURIComponent(SHARE_CONFIG.title);
+      openPopup('https://twitter.com/intent/tweet?url=' + u + '&text=' + t);
+    }
+    function shareNaver() {
+      var u = encodeURIComponent(window.location.href);
+      var t = encodeURIComponent(SHARE_CONFIG.title);
+      openPopup('https://share.naver.com/web/shareView?url=' + u + '&title=' + t);
+    }
+    function shareKakao() {
+      if (!window.Kakao || !Kakao.Share) { return; }
+      if (!Kakao.isInitialized || !Kakao.isInitialized()) { return; }
+      try {
+        Kakao.Share.sendDefault({
+          objectType: 'feed',
+          content: {
+            title: SHARE_CONFIG.title,
+            description: SHARE_CONFIG.description,
+            imageUrl: SHARE_CONFIG.ogImage,
+            link: {
+              mobileWebUrl: window.location.href,
+              webUrl: window.location.href
+            }
+          },
+          buttons: [{
+            title: '자세히 보기',
+            link: {
+              mobileWebUrl: window.location.href,
+              webUrl: window.location.href
+            }
+          }]
+        });
+      } catch (e) {}
+    }
+    function shareInstagram() {
+      copyUrlWithToast(window.location.href, 'URL이 복사되었습니다. 인스타그램에 붙여넣어 주세요.');
+    }
+    function shareCopy() {
+      copyUrlWithToast(window.location.href, '클립보드에 복사되었습니다.');
+    }
+    var SHARE_HANDLERS = {
+      kakao:     shareKakao,
+      facebook:  shareFacebook,
+      twitter:   shareTwitter,
+      naver:     shareNaver,
+      instagram: shareInstagram,
+      copy:      shareCopy
+    };
+    if (shareModal) {
+      shareModal.addEventListener('click', function(e) {
+        var target = e.target.closest ? e.target.closest('[data-share]') : null;
+        if (!target) { return; }
+        var type = target.getAttribute('data-share');
+        var handler = SHARE_HANDLERS[type];
+        if (typeof handler === 'function') {
+          handler();
+          closeShareModal();
+        }
+      });
+    }
+
+    var btnShare = document.getElementById('btnShare');
+    if (btnShare) {
+      btnShare.addEventListener('click', function() { openShareModal(btnShare); });
+    }
+    var btnShareFloating = document.getElementById('btnShareFloating');
+    if (btnShareFloating) {
+      btnShareFloating.addEventListener('click', function() { openShareModal(btnShareFloating); });
+    }
+    var btnScrollTop = document.getElementById('btnScrollTop');
+    if (btnScrollTop) {
+      btnScrollTop.addEventListener('click', function (e) {
+        e.preventDefault();
+        var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var behavior = reduce ? 'auto' : 'smooth';
+        try {
+          window.scrollTo({ top: 0, left: 0, behavior: behavior });
+        } catch (err) {
+          (document.scrollingElement || document.documentElement).scrollTop = 0;
+          document.body.scrollTop = 0;
+        }
+      });
+    }
+</script>
+</body>
+</html>
